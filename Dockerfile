@@ -1,7 +1,7 @@
 FROM alpine
 
-RUN apk --no-cache add update \
-    chromium \
+RUN apk --no-cache update
+RUN apk --no-cache add chromium \
     chromium-chromedriver \
     ruby \
     ruby-rdoc \
