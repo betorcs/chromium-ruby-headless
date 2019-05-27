@@ -9,7 +9,11 @@ RUN apk --no-cache add chromium \
     make \
     alpine-sdk \
     zlib-dev \
-    bash
+    bash \
+    mesa-gles
+
+RUN mkdir -r /usr/lib/chromium/swiftshader
+RUN ln -s /usr/lib/libGLESv2.so.2 /usr/lib/chromium/swiftshader/libGLESv2.so
 
 RUN gem install bundler
 
